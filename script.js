@@ -14,3 +14,14 @@ if (lastClaim === today) {
     message.textContent = "¡Recompensa diaria reclamada! 🥥💰";
   });
 }
+<script>
+  function handleVerificationSuccess() {
+    document.getElementById("claimBtn").disabled = false;
+    document.getElementById("message").textContent = "¡Verificado! Ya puedes reclamar tu Bitcococoin 🥥💰";
+  }
+
+  function handleVerificationError(error) {
+    console.error("Falló la verificación:", error);
+    document.getElementById("message").textContent = "Ocurrió un error. Intenta verificar de nuevo.";
+  }
+</script>
